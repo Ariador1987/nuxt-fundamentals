@@ -1,23 +1,25 @@
 <script setup lang="ts">
-    const query = ref<string>();
-
-    const config = useRuntimeConfig();
-    const apiKey = config.public.apiKey;
-    const handleSearch = (e: Event) => {
-        $fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${query.value}`);
-    };
+    // definePageMeta({
+    //     middleware: ["logger"],
+    // });
 </script>
 
 <template>
-    <div>Page: movies/index</div>
-    <form @submit.prevent="handleSearch">
-        <input
-            type="text"
-            name="movie"
-            id="movie"
-            v-model="query"
-        /><button>Search</button>
-    </form>
+    <AppMovieSearch />
 </template>
 
-<style scoped></style>
+<style scoped>
+    .error {
+        color: red;
+        margin-top: 1rem;
+    }
+
+    .results {
+        margin-top: 1rem;
+    }
+
+    .no-results {
+        margin-top: 1rem;
+        font-style: italic;
+    }
+</style>
