@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
     useHead({
         titleTemplate(title) {
             return title ? `My movie site - ${title}` : "My movie site";
