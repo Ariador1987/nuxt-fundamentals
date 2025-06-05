@@ -1,7 +1,7 @@
 <script setup lang="ts">
-    // definePageMeta({
-    //     middleware: ["logger"],
-    // });
+    definePageMeta({
+        middleware: ["logger"],
+    });
 </script>
 
 <template>

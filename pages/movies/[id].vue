@@ -46,8 +46,8 @@
     useHead({
         title: data.value?.Title,
         meta: [
-            { name: "description", content: data.value.Plot },
-            { name: "og:image", content: data.value.Poster },
+            { name: "description", content: data?.value?.Plot },
+            { name: "og:image", content: data?.value?.Poster },
         ],
     });
 </script>
